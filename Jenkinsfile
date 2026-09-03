@@ -7,12 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/Rohank143/springboot-kafka-microservices-main.git'
-            }
-        }
-
         // Must be built & installed FIRST — all other services depend on this local artifact.
         // The published version (io.github.haphong463:common-lib:1.0.7) on Maven Central is
         // outdated and is missing fields added locally (e.g. variantId in OrderItemDTO).
