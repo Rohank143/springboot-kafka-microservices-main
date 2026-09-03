@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh '''
                     cd common-lib
-                    mvn clean install -DskipTests
+                    mvn clean install -DskipTests -Dgpg.skip=true
                 '''
             }
         }
